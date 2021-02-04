@@ -3,11 +3,24 @@
     <head>
         <meta charset=utf-8>
         <title>About Me</title>
+        <style>
+            .button{
+            	padding: 10px 25px;
+            	border:none;
+            	border-radius: 4px;
+                background-color:rgb(250,200,250);
+                transition-duration: 0.2s;
+                font:sans-serif;
+            }
+            .button:hover{	
+                background-color:rgb(130,220,240);
+            }
+        </style>
     </head>
-    <body>
-        <a href=../index.html>home</a>
-        <a href=../pages/about.html>about</a>
-        <a href=../pages/portfolio.html>portfolio</a>
+    <body style="background-color:powderblue;">
+        <button class=button><a href=./index.html>Home</a></button>
+        <button class=button><a href=./pages/about.html>About</a></button>
+        <button class=button><a href=./pages/portfolio.html>Portfolio</a></button>
         <h1>About me</h1>
         <p>My name is Adam Smith. I'm 15 years old and I first got into programming 5 years ago with Khan Academy. Here's a picture of one of my old projects</p>
         <img src=../images/old_project.png>
