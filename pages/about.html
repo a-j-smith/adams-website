@@ -23,9 +23,9 @@
         <button class=button><a href=../pages/portfolio.html>Portfolio</a></button>
         <h1>About me</h1>
         <p>My name is Adam Smith. I'm 15 years old and I first got into programming 5 years ago with Khan Academy. Here's a picture of one of my old projects</p>
-        <img src=../images/old_project.png>
-        <p> I like lots of different things like Star Wars and video games. In addition I play the tuba in band.
+        <canvas id= mycanvas1></canvas>
          <canvas id="mycanvas"></canvas>    
+         <p> I like lots of different things like Star Wars and video games. In addition I play the tuba in band.
          <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
  
         <script>
@@ -100,4 +100,82 @@ draw = function() {
             var processingInstance = new Processing(canvas, sketchProc); 
         </script>   
     </body>
+<script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400); 
+        frameRate(30);
+        noStroke();
+colorMode(RGB);
+var fps = 24;
+frameRate(fps);
+//colorMode(RGB);
+background(255, 255, 255);
+colorMode(HSB);
+background(255, 0, 255);
+//background(0, 0, 0);
+var r=0;
+var g=90;
+var b=0;
+var i = 0;
+var timesPerSecond = 10;
+
+keyPressed = function(){
+    loop();
+};
+var coins=1;
+var x = 229;
+mousePressed=function(){
+    //timesPerSecond++;
+    noLoop();
+    var y = x/25.5;
+    println("you get to move "+round(y)+" spaces");
+};
+draw= function() {
+    i=0;
+    if(x>=255){
+        x=0;
+    }
+    else{
+        x++;
+    }
+    //mousePressed();
+    background(x, 255, 255);
+    fill(0, 0, 0);
+    triangle(179, 50, 230, 50, 202, 100);
+    if(timesPerSecond>1&&frameCount%(round(fps/timesPerSecond))===0){
+        timesPerSecond-=0.5;
+
+    }
+    while(i<360){
+        noStroke();
+        r+=10/2;
+        i+=5/10;
+        //g+=10;
+        //b+=10;
+        if(r>=255){
+            r = 0;
+        }
+        fill(r, 255, 255);
+        pushMatrix();
+        translate(200, 200);
+        rotate(1*i);
+        scale(1);
+        rect(0, 0, timesPerSecond*400/4/1, 1);
+        popMatrix();
+    }
+    if(frameCount%(round(fps/timesPerSecond))===0){
+        //playSound(getSound("rpg/coin-jingle"));
+        coins++;
+        //println(coins);
+        }
+};
+        
+    }};
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas1"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
 </html>
