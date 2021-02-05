@@ -104,9 +104,6 @@ draw = function() {
     var sketchProc = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(30);
-        noStroke();
-colorMode(RGB);
 var fps = 24;
 frameRate(fps);
 //colorMode(RGB);
@@ -123,14 +120,14 @@ var timesPerSecond = 10;
 keyPressed = function(){
     loop();
 };
-var coins=1;
+
 var x = 229;
-mousePressed=function(){
+/*mousePressed=function(){
     //timesPerSecond++;
     noLoop();
     var y = x/25.5;
     println("you get to move "+round(y)+" spaces");
-};
+};*/
 draw= function() {
     i=0;
     if(x>=255){
@@ -159,9 +156,9 @@ draw= function() {
         fill(r, 255, 255);
         pushMatrix();
         translate(200, 200);
-        rotate(1*i);
+        rotate(1/2*i);
         scale(1);
-        rect(0, 0, timesPerSecond*400/4/1, 1);
+        rect(0, 0, timesPerSecond*400/4/1, 8);
         popMatrix();
     }
     if(frameCount%(round(fps/timesPerSecond))===0){
