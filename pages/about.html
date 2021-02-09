@@ -28,13 +28,14 @@
          <p> I like lots of different things like Star Wars and video games. In addition I play the tuba in band.
          <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
          <script src="../scripts/pendulum.js">
+             var sProc=sketchProc;
          </script>
          <script>   
              alert(sketchProc);
              // Get the canvas that Processing-js will use
             var canvas = document.getElementById("mycanvas"); 
             // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
-            var processingInstance = new Processing(canvas, sketchProc); 
+            var processingInstance = new Processing(canvas, sProc); 
         </script>   
     </body>
 </html>
