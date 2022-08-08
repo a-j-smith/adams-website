@@ -15,7 +15,11 @@
         <iframe src="https://www.desmos.com/calculator/d7obbfmlkn?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
         <p>The first question to ask is, what does this even mean. If you were to take a point on the curve and draw a circle, all points on the circle would have the same distance to the curve at that point</p>
         <iframe src="https://www.desmos.com/calculator/aa3mzabd11?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-        <p>the problem though is that the particular point on the circle that you choose is extremely important. (sidenote, if you just pick in a psuedorandom method for each point on the curve similar to conways base 13 function you actually end up filling up the space almost like a high stroke width).</p>
+        <p>the problem though is that the particular point on the circle that you choose is extremely important. for example if you always pick the highest point on the circle you just shift it up by one unit.</p> 
+        <p>sidenote, if you just pick a (pseudo random) point on the circle for each point on the curve function you actually end up filling up the space like a high stroke width.</p>
+        <iframe src="https://www.desmos.com/calculator/9fdy5supmp?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+        <p>That very naturally leads to a definition of a parallel curve as the envelope of a circle on every point of the curve. unfortunately that definition is very difficult to work with because given some point on the original curve you can't  get the corresponding point.</p>
+        <iframe src="https://www.desmos.com/calculator/oxkd2xakvd?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
         <p>Picking just any point on that circle wont work though, theres a few obvious properties we want this curve to have.</p> 
         <li>It should be an actual connected curve. </li> 
         <li>tangent lines to one curve should be parallel to tangent lines of the other.</li>
@@ -24,6 +28,7 @@
         <iframe src="https://www.desmos.com/calculator/6sjxicpj7m?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
         <p>Thus, there are only two points where no matter which direction you go the distance stays the same. those points are the points on the circle that are directly perpindicular to the curve. that means the line connecting them to the curve intersects the curve at a right angle.</p>
         <iframe src="https://www.desmos.com/calculator/wngz5weh1t?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+        <p>That means that another way to construct a parallel curve to some curve \(\gamma\) is taking that curve and adding a unit normal vector \(\gamma_d \eq \gamma + d*\hat{n}\)</p>
         $$\Gamma+\hat{n}$$
         $$\frac{1}{x}$$
     </body>
