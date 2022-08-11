@@ -28,8 +28,12 @@
         <iframe src="https://www.desmos.com/calculator/6sjxicpj7m?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
         <p>Thus, there are only two points where no matter which direction you go the distance stays the same. those points are the points on the circle that are directly perpindicular to the curve. that means the line connecting them to the curve intersects the curve at a right angle.</p>
         <iframe src="https://www.desmos.com/calculator/wngz5weh1t?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-        <p>That means that another way to construct a parallel curve to some curve \(\gamma\) is taking that curve and adding a unit normal vector \(\gamma_d \eq \gamma + d*\hat{n}\)</p>
-        $$\Gamma+\hat{n}$$
-        $$\frac{1}{x}$$
+        <p>That means that another way to construct a parallel curve to some curve \(\gamma\) is taking that curve and adding a unit normal vector</p>
+        $$\gamma_d = \gamma + d*\hat{n}$$
+        <p>and, because the normal vector to one curve is normal to the other</p>
+        $$\gamma = \gamma_d - d*\hat{n}$$
+        $$where d \in \mathbb{R}, \hat{n} is perpendicular to \gamma and ||\hat{n}||=1
+        <p>This definition is significantly eeasier to work because given that you can construct a normal (which is fairly simple) you can actually get a formula for a parallel curve. That makes it significantly easier to for example find the arclength which is a simple yet tedious calc problem.</p>
+        <p>Imagine a rigid rod in place of the normal vector. Then on the end of the rod looking at the other end from your perspective the other end would only be rotating and would not be moving side to side. Thus from your perspective, its speed would be \(d*\omega\) and since you are moving at \(v\), the net speed of the end of the rod is \(v+\omega d\). Since distance = average speed * time and averages are linear, the distance along the arc is \(s_{\gamma_d} = s_{\gamma}+d \Delta \Theta\). Theres actually a problem with this. When \(d\omega > v\), the angle is decreasing but the length is increasing   </p>
     </body>
 </html>
