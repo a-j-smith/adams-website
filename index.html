@@ -12,28 +12,28 @@
         <h1 style="font:sans-serif;">Tangent circles, Machining and Parallel paths</h1>
         <p>This project assumes some knowledge of calculus but hopefully will still be understandable without it.</p>
         <p>If you've ever looked at a road youve probably alraeady seen a parallel curve and, if you look at it that </p>
-        <iframe src="https://www.desmos.com/calculator/d7obbfmlkn?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+        <iframe src="https://www.desmos.com/calculator/v6r9oy54ql?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
         <p>The first question to ask is, what does this even mean. If you were to take a point on the curve and draw a circle, all points on the circle would have the same distance to the curve at that point</p>
-        <iframe src="https://www.desmos.com/calculator/aa3mzabd11?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+        <iframe src="https://www.desmos.com/calculator/mmkg2kimsr?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
         <p>the problem though is that the particular point on the circle that you choose is extremely important. for example if you always pick the highest point on the circle you just shift it up by one unit.</p> 
         <p>sidenote, if you just pick a (pseudo random) point on the circle for each point on the curve function you actually end up filling up the space like a high stroke width.</p>
-        <iframe src="https://www.desmos.com/calculator/9fdy5supmp?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+        <iframe src="https://www.desmos.com/calculator/osylbknio0?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
         <p>That very naturally leads to a definition of a parallel curve as the envelope of a circle on every point of the curve. unfortunately that definition is very difficult to work with because given some point on the original curve you can't  get the corresponding point.</p>
-        <iframe src="https://www.desmos.com/calculator/oxkd2xakvd?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+        <iframe src="https://www.desmos.com/calculator/lv7m2tttdd?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
         <p>Picking just any point on that circle wont work though, theres a few obvious properties we want this curve to have.</p> 
         <li>It should be an actual connected curve. </li> 
         <li>tangent lines to one curve should be parallel to tangent lines of the other.</li>
         <li> The distance between corresponding points should be constant </li>
         <p>If you imagine taking a small step \({\Delta} t\) along the curve, most of the points which are in the direction of that step become closer to the curve and thus those points dont really fit the idea behind the curve. . There's actually a nice geometric way to interpret this. what we want is to find all the points where the distance to \(f(t+\Deltat)\leq\)the distance to \(f(t)\). to do that you can draw an ellipse which corresponds to points that have a total distance of \(2r\) from \(f(t) and f(t+{\Delta}t)\). Then the points with a distance lower than \(r\) from \(f(t+{\Delta}t)\) are the ppoints inside the ellipse and on the circle. Then, since the intersection of the ellipse and the circle happens at the midpoint of the two foci, and the foci approach each other as \(\Delta t\) approaches 0, the points outside the ellipse are on the other side of the circle.  </p> 
-        <iframe src="https://www.desmos.com/calculator/6sjxicpj7m?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+        <iframe src="https://www.desmos.com/calculator/r92h8uihys?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
         <p>Thus, there are only two points where no matter which direction you go the distance stays the same. those points are the points on the circle that are directly perpindicular to the curve. that means the line connecting them to the curve intersects the curve at a right angle.</p>
-        <iframe src="https://www.desmos.com/calculator/wngz5weh1t?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+        <iframe src="https://www.desmos.com/calculator/0txdovjjmq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
         <p>That means that another way to construct a parallel curve to some curve \(\gamma\) is taking that curve and adding a unit normal vector</p>
         $$\gamma_d = \gamma + d*\hat{n}$$
         <p>and, because the normal vector to one curve is normal to the other</p>
         $$\gamma = \gamma_d - d*\hat{n}$$
         $$\text{where }d \in \mathbb{R}, \hat{n}\text{ is perpendicular to }\gamma\text{ and }||\hat{n}||=1$$
         <p>This definition is significantly eeasier to work because given that you can construct a normal (which is fairly simple) you can actually get a formula for a parallel curve. That makes it significantly easier to for example find the arclength which is a simple yet tedious calc problem.</p>
-        <p>Imagine a rigid rod in place of the normal vector. Then on the end of the rod looking at the other end from your perspective the other end would only be rotating and would not be moving side to side. Thus from your perspective, its speed would be \(d*\omega\) and since you are moving at \(v\), the net speed of the end of the rod is \(v+\omega d\). Since distance = average speed * time and averages are linear, the distance along the arc is \(s_{\gamma_d} = s_{\gamma}+d \Delta \Theta\). Theres actually a problem with this. When \(d\omega > v\), the angle is decreasing but the length is increasing   </p>
+        <p>To find arc length, first we need to step back and think about speed. thats because speed is (arc) length over time so given the speed (as a function of time) we can get the length. so, whats the speed of a particle on the other curve. </p>
     </body>
 </html>
