@@ -56,11 +56,11 @@
         $$= \iint(1+d * \frac{FM-EN}{EG-F^2}+d * \frac{FM-GL}{EG-F^2}+d^2 \frac{FM-GL}{EG-F^2}\frac{FM-EN}{EG-F^2}-\frac{FL-EM}{EG-F^2}\frac{FN-GM}{EG-F^2})||a_u \times a_v|| du dv= \iint 1 + d(\kappa_1 + \kappa_2) +d^2 \kappa_1 \kappa_2 ||a_u \times a_v||du dv$$
         $$=\iint(1+d*\kappa_1+\kappa_2+\kappa_1 \kappa_2)dA
         <p>Using the Gauss Bonnet theorem,</p>
-        $$\iint \kappa_1 \kappa_2 ||a_u \times a_v||du dv = \iint_M d^2 K dA = d^2 (2\pi \chi - \int_{\del M} \kappa_g ds)$$
+        $$\iint \kappa_1 \kappa_2 ||a_u \times a_v||du dv = \iint_M d^2 K dA = d^2 (2\pi \chi - \int_{\partial M} \kappa_g ds)$$
         
         <p>From here I would guess that in general the n dimension area of an n dimensional surface is \(\int \prod_1^{n} (1+\kappa_n dx_n) \) but this is just pure extrapolation.</p>
         <h2>Application</h2>
-            <p>Surprisingly, these curves actually pop up very regularly in things like machining and path design. In machining, because the thing you cut with has thickness its important that you never get too close to the surface. Many paths are intentionally designed to be roughly constant width. That means that the outside of some path will be longer than the inside.</p>
+            <p>Surprisingly, these curves actually pop up very regularly in things like machining and path design. In machining, because the thing you cut with has thickness its important that you never get too close to the surface. Many paths are intentionally designed to be roughly constant width. That means that the outside of some path will be longer than the inside. That means that in the context I originally learned about this problem, path efficiency, the answer is that the most efficient path is whichever one ends up being on the inside and its independent of the precise path.</p>
             <h2>Conclusions</h2>
             <p>Often when it comes to solving some problem, defining the thing to work with in a useful manner is half the battle. Once you get a useful definition, the actual math is often not too bad. While the 2d case was fairly simple, trying to generalize lead to a lot of difficulty because of some implicit assumptions. Simple problems can often lead to deep rabbitholes with no visible end.</p>
     </body>
