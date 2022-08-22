@@ -56,11 +56,13 @@
         $$=\iint ||a_u\times a_v + da_u \times S(||a_v||(v_1 sin(\theta_2) + v_2 cos(\theta_2) + d S(||a_u||(v_1 sin(\theta_1) + v_2 cos(\theta_1)) \times a_v + d^2 S(||a_u||(v_1 sin(\theta_1) + v_2 cos(\theta_1)) \times  S(||a_v||(v_1 sin(\theta_2) + v_2 cos(\theta_2)|| du dv$$
         $$=\iint ||a_u\times a_v + d(||a_u||(v_1 sin(\theta_1) + v_2 cos(\theta_1) \times ||a_v||(\kappa_1 v_1 sin(\theta_2) + \kappa_2 v_2 cos(\theta_2) + d ||a_u||(\kappa_1 v_1 sin(\theta_1) + \kappa_2 v_2 cos(\theta_1)) \times ||a_v||(v_1sin(\theta_2) + v_2 cos(\theta_2)) + d^2 (||a_u||(\kappa_1 v_1 sin(\theta_1) + \kappa_2 v_2 cos(\theta_1)) \times  ||a_v||(\kappa_1 v_1 sin(\theta_2) + \kappa_2 v_2 cos(\theta_2)|| du dv$$
         $$=\iint ||a_u\times a_v + ||a_u||||a_v||(d((v_1 sin(\theta_1) \times + v_2 cos(\theta_1) \times (\kappa_1 v_1 sin(\theta_2) + \kappa_2 v_2 cos(\theta_2) + d(\kappa_1 v_1 sin(\theta_1) + \kappa_2 v_2 cos(\theta_1)) \times (v_1sin(\theta_2) + v_2 cos(\theta_2)) + d^2 ((\kappa_1 v_1 sin(\theta_1) + \kappa_2 v_2 cos(\theta_1)) \times  (\kappa_1 v_1 sin(\theta_2) + \kappa_2 v_2 cos(\theta_2)|| du dv$$
-        $$=\iint(1+d*\kappa_1+\kappa_2+\kappa_1 \kappa_2)dA
+        $$=\iint ||a_u\times a_v + ||a_u||||a_v||(d(\kappa_2 cos(\theta_1)sin(\theta_2) - d\kappa_1 sin(\theta_1)cos(\theta_2)(v_1 \times v_2)  + d\kappa_1 sin(\theta_1)cos(\theta 2) - d\kappa_2 sin(\theta 2)cos(\theta 1) (v_1 \times v_2)) + d^2 (( \kappa_1 \kappa_2 (sin(\theta_1) cos(\theta_2) - cos(\theta_1) sin(\theta_2) (v_1  \times v_2)|| du dv$$
+        $$=\iint ||(1 + d*\kappa_1 +d\kappa_2 +d^2 \kappa_1 \kappa_2)||a_u||||a_v||sin(\theta)(v1 \ times v2)||du dv$$
+        $$=\iint(1+d*\kappa_1+\kappa_2+\kappa_1 \kappa_2)dA$$
         <p>Using the Gauss Bonnet theorem,</p>
         $$\iint \kappa_1 \kappa_2 ||a_u \times a_v||du dv = \iint_M d^2 K dA = d^2 (2\pi \chi - \int_{\partial M} \kappa_g ds)$$
         
-        <p>From here I would guess that in general the n dimension area of an n dimensional surface is \(\int \prod_1^{n} (1+\kappa_n dx_n) \) but this is just pure extrapolation.</p>
+        <p>From here I would guess that in general the n dimension area of an n dimensional surface is \(\int \prod_1^{n} (1+\kappa_n dx_n)\)\)but this is just pure extrapolation.</p>
         <h2>Application</h2>
             <p>Surprisingly, these curves actually pop up very regularly in things like machining and path design. In machining, because the thing you cut with has thickness its important that you never get too close to the surface. Many paths are intentionally designed to be roughly constant width. That means that the outside of some path will be longer than the inside. That means that in the context I originally learned about this problem, path efficiency, the answer is that the most efficient path is whichever one ends up being on the inside and its independent of the precise path.</p>
             <h2>Conclusions</h2>
